@@ -40,17 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 2,
-            title: 'Parfum Laundry Sakura 5 L',
+            title: 'Parfum Laundry Sakura 5L',
             price: 155000,
             image: 'https://qph.cf2.quoracdn.net/main-qimg-bbaf919d5934f5d748d981272ed6a465',
             description: 'Saat ini, ada banyak pilihan jasa laundry kiloan di daerah tersebut yang menawarkan berbagai macam keunggulan, salah satunya adalah parfum laundry yang wangi dan tahan lama dengan aroma sakura.'
         },
         {
             id: 3,
-            title: 'Product 3',
-            price: 350000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Curabitur non nulla sit amet nisl tempus convallis.'
+            title: 'Parfum Laundry Bubblegum 5L',
+            price: 155000,
+            image: 'https://qph.cf2.quoracdn.net/main-qimg-186b9351a02a14a85f3714bdf399eaf5',
+            description: 'Salah satu varian yang kini banyak diminati adalah Parfum Laundry Bubblegum . Dengan aroma khas permen karet yang segar dan ceria, parfum ini tak hanya menawarkan keharuman tahan lama, tetapi juga menghadirkan suasana menyenangkan setiap kali pakaian digunakan.'
         },
         {
             id: 4,
