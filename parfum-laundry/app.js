@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 2,
-            title: 'Product 2',
-            price: 250000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Vestibulum ante ipsum primis in faucibus orci luctus.'
+            title: 'Parfum Laundry Sakura 5 L',
+            price: 155000,
+            image: 'https://qph.cf2.quoracdn.net/main-qimg-bbaf919d5934f5d748d981272ed6a465',
+            description: 'Saat ini, ada banyak pilihan jasa laundry kiloan di daerah tersebut yang menawarkan berbagai macam keunggulan, salah satunya adalah parfum laundry yang wangi dan tahan lama dengan aroma sakura.'
         },
         {
             id: 3,
