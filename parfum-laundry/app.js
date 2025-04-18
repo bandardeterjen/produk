@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const products = [
         {
             id: 1,
-            title: 'Product 1',
-            price: 150000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: 'Parfum Laundry Aquafresh 5L',
+            price: 155000,
+            image: 'https://qph.cf2.quoracdn.net/main-qimg-22877e321bfb6410792a7d6bf8a91e09',
+            description: 'Produk ini memiliki aroma segar dan menyegarkan yang terinspirasi dari kesegaran air laut. Aroma aquafresh yang terkandung di dalam produk ini memberikan sensasi kebersihan dan keceriaan saat mencuci pakaian.'
         },
         {
             id: 2,
