@@ -33,21 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const products = [
         {
             id: 1,
-            title: 'Parfum Laundry Aquafresh 5L',
+            title: 'Parfum Laundry Aroma Aquafresh 5L',
             price: 155000,
             image: 'https://qph.cf2.quoracdn.net/main-qimg-22877e321bfb6410792a7d6bf8a91e09',
             description: 'Produk ini memiliki aroma segar dan menyegarkan yang terinspirasi dari kesegaran air laut. Aroma aquafresh yang terkandung di dalam produk ini memberikan sensasi kebersihan dan keceriaan saat mencuci pakaian.'
         },
         {
             id: 2,
-            title: 'Parfum Laundry Sakura 5L',
+            title: 'Parfum Laundry Aroma Sakura 5L',
             price: 155000,
             image: 'https://qph.cf2.quoracdn.net/main-qimg-bbaf919d5934f5d748d981272ed6a465',
             description: 'Saat ini, ada banyak pilihan jasa laundry kiloan di daerah tersebut yang menawarkan berbagai macam keunggulan, salah satunya adalah parfum laundry yang wangi dan tahan lama dengan aroma sakura.'
         },
         {
             id: 3,
-            title: 'Parfum Laundry Bubblegum 5L',
+            title: 'Parfum Laundry Aroma Bubblegum 5L',
             price: 155000,
             image: 'https://qph.cf2.quoracdn.net/main-qimg-186b9351a02a14a85f3714bdf399eaf5',
             description: 'Salah satu varian yang kini banyak diminati adalah Parfum Laundry Bubblegum . Dengan aroma khas permen karet yang segar dan ceria, parfum ini tak hanya menawarkan keharuman tahan lama, tetapi juga menghadirkan suasana menyenangkan setiap kali pakaian digunakan.'
