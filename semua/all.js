@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 11,
-            title: 'Klenzo Eco Enzyme Biang Pembersih Penyubur Tanaman',
-            price: 275000,
+            title: 'Klenzo Eco Enzyme Biang  Penyubur Tanaman',
+            price: 27500,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/25/a079c51a-6324-43bc-af62-26478e370b34.jpg',
             description: 'Klenzo Eco Enzyme adalah produk cairan biang yang terbuat dari bahan-bahan alami dan ramah lingkungan. Produk ini memiliki banyak kegunaan di rumah, mulai dari membersihkan hingga menjadi pupuk organik.'
         },
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 	{
             id: 20,
-            title: 'Sabun Batang Lerak',
+            title: 'Sabun Batang Lerak Pembersih Sebaguna',
             price: 9500,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/9/18/79d9a786-43f6-4c1b-b047-e6b3445bee4f.jpg.webp?ect=4g',
             description: 'Sabun batang lerak adalah jenis sabun tradisional Indonesia yang terbuat dari ekstrak akar tanaman lerak (Sapindus rarak). Tanaman lerak merupakan tumbuhan asli Indonesia yang buahnya mengandung saponin, zat alami yang memiliki kemampuan membersihkan layaknya deterjen'
