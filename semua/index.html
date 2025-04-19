@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://raw.githubusercontent.com/bandardeterjen/index.html/refs/heads/images/favicon.ico" rel="icon">
+    <link href="https://raw.githubusercontent.com/bandardeterjen/index.html/refs/heads/images/apple-touch-icon.png" rel="apple-touch-icon">
+<title>085773009666 Parfum Laundry, Deterjen, Softener, Antinoda, Karbol</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/bandardeterjen/index.html/refs/heads/images/bandardeterjen-logo-removebg-preview.png" alt="Bandar Deterjen">
+            </div>
+            
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">Cara Berbelanja</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Kontak</a></li>
+                </ul>
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section class="page home-page active">
+            <div class="products"></div>
+            <div class="pagination"></div>
+        </section>
+
+        <!-- About Page -->
+        <section class="page about-page">
+            <h2>Cara Berbelanja</h2>
+            <div class="page-content">
+               <p>Cara Berbelanja Di Toko Online Ini</p>
+                <p>1. Klik produk yang diinginkan (boleh lebih dari satu). Bisa klik pada pencarian.</p>
+                <p>2. Klik keranjang. Pada versi mobile, klik menu terlebih dahulu.</p>
+                <p>3. Tambah jumlah barang dengan klik + bila diperlukan, Ulangi bila tambah item lain. </p>
+                <p>4. Tulis data diri seperti alamat, nomor Whatsapp, dan alamat pengiriman.</p>
+                <p>5. Klik Selesaikan Pesanan dan tunggu instruksi pembayaran..</p>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section class="page contact-page">
+            <h2>Hubungi Kami</h2>
+            <div class="page-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 085773009666</p>
+                    <p><i class="fas fa-envelope"></i> bandardeterjen@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Pejagalan Kulon no. 50, Sokaraja, Banyumas, Jawa Tengah</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Narogong Raya Pangkalan 8, Cileungsi, Bogor, Jawa Barat</p>
+                </div>
+                <form class="contact-form" id="whatsappForm">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Nomor WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Kirim via WhatsApp</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart"><i class="fas fa-times"></i></span>
+            <h2>Keranjang Belanja</h2>
+            <div class="cart-content">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="customer-info">
+                <h3>Informasi Pelanggan</h3>
+                <div class="form-group">
+                    <label for="customer-name">Nama Lengkap</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Nomor WhatsApp</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Alamat Pengiriman</label>
+                    <textarea id="customer-address" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <h3>Total: <span class="cart-total">Rp 0</span></h3>
+                <button class="clear-cart">Kosongkan Keranjang</button>
+                <button class="checkout">Selesaikan Pesanan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="product-modal">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fas fa-times"></i></span>
+            <div class="modal-body">
+                <!-- Product details will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bandar Deterjen</h3>
+                    <p>Toko online terpercaya dengan berbagai produkparfum laundry, parfum sepatu, parfum karpet, dll.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="footer-link" data-page="about">Tentang</a></li>
+                        <li><a href="#" class="footer-link" data-page="contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-icons">
+                        <a href="http://www.facebook.com/bandardeterjen"><i class="fab fa-facebook"></i></a>
+                        <a href="http://www.instagramk.com/bandardeterjen"><i class="fab fa-instagram"></i></a>
+                        <a href="http://www.twitter.com/bandardeterjen"><i class="fab fa-twitter"></i></a>
+                        <a href="http://www.youtube.com/bandardeterjen"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bandar Deterjen. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="all.js"></script>
+</body>
+</html>
