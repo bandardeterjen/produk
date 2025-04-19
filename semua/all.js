@@ -122,55 +122,55 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/11/28/7980599c-9fc2-4820-a6b3-43aa0f127cf5.jpg.webp?ect=4g',
             description: 'Salah satu cara untuk mencapai tampilan yang maksimal adalah dengan menggunakan semir ban yang berkualitas. Semir ban bukan hanya membuat tampilan ban lebih menarik, tetapi juga dapat melindungi ban dari kerusakan akibat paparan sinar UV dan cuaca.'
         },
-		{
+	{
             id: 14,
             title: 'Sabun Deterjen Laundry Cair Busa Sedang 600 ml',
             price: 6500,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/11/6/b763ac54-5f5a-4c24-b10c-e38d73a1ca49.jpg.webp?ect=4g',
             description: 'Sabun deterjen laundry cair dengan busa sedang menawarkan berbagai keunggulan bagi para pengguna. Produk ini dirancang khusus untuk memenuhi kebutuhan mencuci pakaian secara praktis, baik untuk laundry kiloan maupun satuan.'
         },
-		{
+	{
             id: 15,
             title: 'Softener Pelembut Parfum Laundry Wangi 5 Liter',
             price: 45000,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/10/26/2ab5a439-5409-4046-99ea-15fb66b79210.jpg.webp?ect=4g',
             description: 'Produk ini hadir dalam berbagai varian aroma yang menarik, sehingga Anda dapat memilih aroma yang sesuai dengan selera Anda. Penggunaan pelembut ini setelah proses pembilasan akan membuat pakaian Anda terasa lembut dan wangi sepanjang hari.'
         },
-		{
+	{
             id: 16,
             title: 'Softener Pelembut Pakaian Parfum Laundry 1 L',
             price: 13500,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/10/26/39aec02b-cf3c-4793-8cb6-d3f1156cc0c6.jpg.webp?ect=4g',
             description: 'Setelah proses pencucian, tentunya kita ingin pakaian kita tidak hanya bersih, tetapi juga lembut dan wangi. Nah, salah satu produk yang dapat membantu Anda mencapai keinginan tersebut adalah pelembut pakaian parfum laundry ekstra wangi.'
         },
-		{
+	{
             id: 17,
             title: 'Karbol Serai Sereh Putih Susu Kental 1 Liter',
             price: 16000,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/10/21/3cd3a286-3889-4fe9-b6fa-55b004f64e3c.jpg.webp?ect=4g',
             description: 'Karbol sereh, atau yang lebih dikenal dengan serai putih susu kental, adalah cairan pembersih alami yang terbuat dari ekstrak tanaman sereh. Cairan ini memiliki banyak kegunaan dalam kehidupan sehari-hari, mulai dari mengepel lantai, membersihkan toilet, hingga mengusir serangga.'
         },
-		{
+	{
             id: 18,
             title: 'Parfum Karpet Masjid Solventbase 1 Liter',
             price: 65000,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/10/8/13ef92af-f684-4057-a2a3-93ffba148d82.jpg.webp?ect=4g',
-            description: ''
+            description: 'Produk ini menggunakan bahan dasar pelarut (solvent) yang aman digunakan di area masjid. Setiap pembelian 1 liter parfum karpet masjid, Anda akan mendapatkan bonus 1 liter karbol pinus atau karbol sereh yang dikirim secara acak.'
         },
-		{
+	{
             id: 19,
             title: 'Sabun Mandi Cair Isi Ulang 1 Liter',
             price: 17500,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/12/8/e7cb7725-0adc-4a58-9006-39f1a4987d07.jpg.webp?ect=4g',
             description: 'Salah satu produk perawatan kulit yang semakin populer adalah sabun mandi cair (body wash) isi ulang (refill) dengan berbagai manfaat tambahan'
         },
-		{
+	{
             id: 20,
             title: 'Sabun Batang Lerak',
             price: 9500,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/9/18/79d9a786-43f6-4c1b-b047-e6b3445bee4f.jpg.webp?ect=4g',
             description: 'Sabun batang lerak adalah jenis sabun tradisional Indonesia yang terbuat dari ekstrak akar tanaman lerak (Sapindus rarak). Tanaman lerak merupakan tumbuhan asli Indonesia yang buahnya mengandung saponin, zat alami yang memiliki kemampuan membersihkan layaknya deterjen'
-        }
+        },
     ];
 
     // Format price to Rupiah
