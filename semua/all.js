@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Alkholisi Plain Detergent: Sabun Cair Khusus untuk Keperluan Haji dan Umroh 250 ml',
             price: 6000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/3/16/795831af-4242-4603-a51f-568ce3a9a630.jpg',
-            description: 'Salah satu produk yang dirancang khusus untuk mendukung kebutuhan ini adalah *Alkholisi Plain Detergent* , sabun cair yang aman dan praktis untuk mencuci pakaian selama perjalanan ibadah.'
+            description: 'Salah satu produk yang dirancang khusus untuk mendukung kebutuhan ini adalah Alkholisi Plain Detergent, sabun cair yang aman dan praktis untuk mencuci pakaian selama perjalanan ibadah.'
         },
         {
             id: 3,
@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 8,
-            title: 'Product 8',
-            price: 850000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Donec sollicitudin molestie malesuada.'
+            title: 'Parfum Body Sugar Daddy 30 ml',
+            price: 14500,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/4/68219dcf-aa70-4e14-8584-b1463c861a47.jpg',
+            description: 'Salah satu parfum yang sedang populer saat ini adalah Sugar Daddy. Parfum ini memiliki sensasi wangi manis yang cocok untuk digunakan dalam berbagai aktivitas, baik outdoor maupun indoor.'
         },
         {
             id: 9,
