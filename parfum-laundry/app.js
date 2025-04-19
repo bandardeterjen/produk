@@ -54,17 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 4,
-            title: 'Product 4',
-            price: 450000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Pellentesque in ipsum id orci porta dapibus.'
+            title: 'Parfum Laundry Aroma Downy Black 5L',
+            price: 135000,
+            image: 'https://qph.cf2.quoracdn.net/main-qimg-ca61891e8eed63484622e660b4c9f01e',
+            description: 'Salah satu pewangi yang banyak diminati adalah Parfum Laundry Downy Black , produk unggulan dengan aroma yang mewah dan tahan lama. Dengan formula istimewa, Downy Black memberikan sentuhan elegan pada pakaian, menjadikannya pilihan ideal untuk meningkatkan kualitas hasil laundry Anda.'
         },
         {
             id: 5,
-            title: 'Product 5',
-            price: 550000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Nulla quis lorem ut libero malesuada feugiat.'
+            title: 'Parfum Laundry Varian Paris Hilton 5L',
+            price: 155000,
+            image: 'https://qph.cf2.quoracdn.net/main-qimg-bd420aa3302c315a05ffc5d01e166909',
+            description: 'Ingin menghadirkan sensasi kemewahan dan keanggunan dalam setiap pakaian yang dicuci? Parfum Laundry Paris Hilton adalah pilihan tepat! Dengan aroma yang terinspirasi dari gaya hidup glamor Paris Hilton, pewangi ini memberikan keharuman tahan lama yang memancarkan kelas dan keanggunan.'
         },
         {
             id: 6,
