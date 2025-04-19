@@ -33,87 +33,87 @@ document.addEventListener('DOMContentLoaded', () => {
     const products = [
         {
             id: 1,
-            title: 'Parfum Laundry Aroma Aquafresh 5L',
-            price: 155000,
-            image: 'https://qph.cf2.quoracdn.net/main-qimg-22877e321bfb6410792a7d6bf8a91e09',
-            description: 'Produk ini memiliki aroma segar dan menyegarkan yang terinspirasi dari kesegaran air laut. Aroma aquafresh yang terkandung di dalam produk ini memberikan sensasi kebersihan dan keceriaan saat mencuci pakaian.'
+            title: 'Klenzo Deterjen Laundry Non Parfum Haji dan Umroh 5 Liter',
+            price: 60000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/4/12/1244efbe-e4e2-4cca-9bc0-a45982695d08.jpg',
+            description: 'Klenzo Deterjen Laundry Non Parfum hadir sebagai sabun cair khusus yang dirancang untuk kebutuhan ibadah dengan formula yang sederhana, efektif dan sesuai dengan aturan syariat'
         },
         {
             id: 2,
-            title: 'Parfum Laundry Aroma Sakura 5L',
-            price: 155000,
-            image: 'https://qph.cf2.quoracdn.net/main-qimg-bbaf919d5934f5d748d981272ed6a465',
-            description: 'Saat ini, ada banyak pilihan jasa laundry kiloan di daerah tersebut yang menawarkan berbagai macam keunggulan, salah satunya adalah parfum laundry yang wangi dan tahan lama dengan aroma sakura.'
+            title: 'Alkholisi Plain Detergent Sabun Cair Haji dan Umroh 250 ml',
+            price: 6000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/3/16/795831af-4242-4603-a51f-568ce3a9a630.jpg',
+            description: 'Salah satu produk yang dirancang khusus untuk mendukung kebutuhan ini adalah Alkholisi Plain Detergent sabun cair yang aman dan praktis untuk mencuci pakaian selama perjalanan ibadah.'
         },
         {
             id: 3,
-            title: 'Parfum Laundry Aroma Bubblegum 5L',
-            price: 155000,
-            image: 'https://qph.cf2.quoracdn.net/main-qimg-186b9351a02a14a85f3714bdf399eaf5',
-            description: 'Salah satu varian yang kini banyak diminati adalah Parfum Laundry Bubblegum . Dengan aroma khas permen karet yang segar dan ceria, parfum ini tak hanya menawarkan keharuman tahan lama, tetapi juga menghadirkan suasana menyenangkan setiap kali pakaian digunakan.'
+            title: '250 gr Klenzo Eco Enzyme Pupuk Organik',
+            price: 6000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/1/13/01a93f21-4b07-4429-a496-151c9e3a76f0.jpg',
+            description: 'Eco enzyme adalah cairan serbaguna yang dihasilkan dari fermentasi bahan-bahan organik seperti buah-buahan, sayuran, gula, dan air. Proses ini menghasilkan enzim-enzim alami yang bermanfaat untuk berbagai keperluan, mulai dari pembersihan rumah tangga hingga pengolahan limbah'
         },
         {
             id: 4,
-            title: 'Parfum Laundry Aroma Downy Black 5L',
-            price: 135000,
-            image: 'https://qph.cf2.quoracdn.net/main-qimg-ca61891e8eed63484622e660b4c9f01e',
-            description: 'Salah satu pewangi yang banyak diminati adalah Parfum Laundry Downy Black , produk unggulan dengan aroma yang mewah dan tahan lama. Dengan formula istimewa, Downy Black memberikan sentuhan elegan pada pakaian, menjadikannya pilihan ideal untuk meningkatkan kualitas hasil laundry Anda.'
+            title: 'Pelembut Pakaian Softener Laundry Sokaraja 5 Liter',
+            price: 75000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/1/13/8c386fce-c048-4fb0-adc4-e4f00748e689.jpg',
+            description: 'Dalam dunia pencucian pakaian softener atau pelembut pakaian memegang peranan penting untuk menghasilkan pakaian yang lembut wangi dan nyaman saat digunakan. Salah satu produk softener yang cukup populer di Indonesia adalah Softener Laundry Sokaraja.'
         },
         {
             id: 5,
-            title: 'Parfum Laundry Varian Paris Hilton 5L',
-            price: 155000,
-            image: 'https://qph.cf2.quoracdn.net/main-qimg-bd420aa3302c315a05ffc5d01e166909',
-            description: 'Ingin menghadirkan sensasi kemewahan dan keanggunan dalam setiap pakaian yang dicuci? Parfum Laundry Paris Hilton adalah pilihan tepat! Dengan aroma yang terinspirasi dari gaya hidup glamor Paris Hilton, pewangi ini memberikan keharuman tahan lama yang memancarkan kelas dan keanggunan.'
+            title: 'Alkholisi Deterjen Bubuk 500 gr untuk Haji dan Umroh',
+            price: 8000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/3/1/548efa4d-f839-4d58-b84d-cc4dd656dfa6.jpg',
+            description: 'Deterjen ini dirancang khusus tanpa pewangi tambahan menjadikannya pilihan ideal bagi jemaah haji dan umroh yang membutuhkan kebersihan maksimal tanpa mengganggu kekhusyukan ibadah.'
         },
         {
             id: 6,
-            title: 'Deterjen Bubuk Sabun Laundry Sokaraja 500 gr Pilihan Tepat untuk Kebersihan Pakaian Anda',
+            title: 'Deterjen Bubuk Sabun Laundry Sokaraja 500 gr',
             price: 6000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/1/10/aa110d74-8110-47db-888b-b3a56a43362f.jpg',
             description: 'Untuk mendapatkan hasil cucian yang bersih dan wangi, Anda membutuhkan sabun laundry yang berkualitas. Salah satu pilihan yang layak dipertimbangkan adalah sabun laundry Sokaraja deterjen bubuk 500 gr dengan busa sedang dan wangi.'
         },
         {
             id: 7,
-            title: 'Product 7',
-            price: 750000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Cras ultricies ligula sed magna dictum porta.'
+            title: 'Bibit Parfum Jeruk Nipis Lime Sun*light untuk Sabun Cuci Piring 1 kg',
+            price: 275000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/1/7/870f1c38-edb9-4f4e-a906-33f62fae80af.jpg',
+            description: 'Bibit parfum jeruk nipis /lime dapat menjadi salah satu alternatif untuk menambahkan aroma segar dan menyegarkan pada sabun cuci piring. Dengan manfaat antibakteri dan daya tarik aroma yang dimiliki, bibit parfum ini dapat menjadi nilai tambah bagi produk sabun cuci piring Anda.'
         },
         {
             id: 8,
-            title: 'Product 8',
-            price: 850000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Donec sollicitudin molestie malesuada.'
+            title: 'Parfum Body Sugar Daddy 30 ml',
+            price: 14500,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/4/68219dcf-aa70-4e14-8584-b1463c861a47.jpg',
+            description: 'Salah satu parfum yang sedang populer saat ini adalah Sugar Daddy. Parfum ini memiliki sensasi wangi manis yang cocok untuk digunakan dalam berbagai aktivitas, baik outdoor maupun indoor.'
         },
         {
             id: 9,
-            title: 'Product 9',
-            price: 950000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Praesent sapien massa, convallis a pellentesque nec.'
+            title: 'Sokaraja Deterjen Laundry 1 liter',
+            price: 145000,
+            image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/12/25/611842f8-6ad5-406b-8fcb-7de6ed8ac4a6.jpg.webp?ect=4g',
+            description: 'Salah satu produk deterjen yang dapat menjadi solusi adalah Sokaraja Deterjen Laundry. Sokaraja Deterjen Laundry adalah sabun cair serbaguna yang dikhususkan untuk memenuhi kebutuhan mencuci pakaian.'
         },
         {
             id: 10,
-            title: 'Product 10',
-            price: 1050000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Curabitur arcu erat, accumsan id imperdiet et.'
+            title: 'Klenzo Sabun Cair Serbaguna Eco Enzyme 1 Liter',
+            price: 24500,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/25/9a1c90b6-13cc-436e-99b4-04d3736523f3.jpg',
+            description: 'Klenzo Sabun Eco Enzyme adalah sabun cair serbaguna yang terbuat dari bahan-bahan alami dan eco enzyme. Eco enzyme sendiri merupakan hasil fermentasi dari buah-buahan dan gula yang memiliki banyak manfaat, seperti sebagai desinfektan alami dan pupuk organik.'
         },
         {
             id: 11,
-            title: 'Product 11',
-            price: 1150000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Mauris blandit aliquet elit, eget tincidunt nibh.'
+            title: 'Klenzo Eco Enzyme Biang Pembersih Dan Penyubur Tanaman',
+            price: 275000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/25/a079c51a-6324-43bc-af62-26478e370b34.jpg',
+            description: 'Klenzo Eco Enzyme adalah produk cairan biang yang terbuat dari bahan-bahan alami dan ramah lingkungan. Produk ini memiliki banyak kegunaan di rumah, mulai dari membersihkan hingga menjadi pupuk organik.'
         },
         {
             id: 12,
-            title: 'Product 12',
-            price: 1250000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Proin eget tortor risus. Cras ultricies ligula.'
+            title: 'Parfum  Body Chibi Enok Botol Kaca Spray 30 ml',
+            price: 14500,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/7/95ae6ff1-a68c-44e3-ae97-e733cf5bff15.jpg',
+            description: 'Parfum Chibi Enok adalah pilihan yang sempurna bagi Anda yang mencari wangi feminim dan manis yang cocok untuk berbagai aktivitas, baik indoor maupun outdoor. Dengan ukuran botol kaca spray 30 ml, parfum ini mudah dibawa dan diaplikasikan kapan saja.'
         }
     ];
 
