@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const products = [
         {
             id: 1,
-            title: 'Klenzo Deterjen Laundry Non Parfum Haji dan Umroh 5 Liter',
+            title: 'Klenzo Deterjen Laundry Non Parfum 5 Liter',
             price: 60000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/4/12/1244efbe-e4e2-4cca-9bc0-a45982695d08.jpg',
             description: 'Klenzo Deterjen Laundry Non Parfum hadir sebagai sabun cair khusus yang dirancang untuk kebutuhan ibadah dengan formula yang sederhana, efektif dan sesuai dengan aturan syariat'
         },
         {
             id: 2,
-            title: 'Alkholisi Plain Detergent Sabun Cair Haji dan Umroh 250 ml',
+            title: 'Alkholisi Plain Detergent 250 ml',
             price: 6000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/3/16/795831af-4242-4603-a51f-568ce3a9a630.jpg',
             description: 'Salah satu produk yang dirancang khusus untuk mendukung kebutuhan ini adalah Alkholisi Plain Detergent sabun cair yang aman dan praktis untuk mencuci pakaian selama perjalanan ibadah.'
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 5,
-            title: 'Alkholisi Deterjen Bubuk 500 gr untuk Haji dan Umroh',
+            title: 'Alkholisi Deterjen Bubuk 500 gr Haji dan Umroh',
             price: 8000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/3/1/548efa4d-f839-4d58-b84d-cc4dd656dfa6.jpg',
             description: 'Deterjen ini dirancang khusus tanpa pewangi tambahan menjadikannya pilihan ideal bagi jemaah haji dan umroh yang membutuhkan kebersihan maksimal tanpa mengganggu kekhusyukan ibadah.'
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 7,
-            title: 'Bibit Parfum Jeruk Nipis Lime Sun*light untuk Sabun Cuci Piring 1 kg',
+            title: 'Bibit Parfum Jeruk Nipis Lime Sunlight 1 kg',
             price: 275000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/1/7/870f1c38-edb9-4f4e-a906-33f62fae80af.jpg',
             description: 'Bibit parfum jeruk nipis /lime dapat menjadi salah satu alternatif untuk menambahkan aroma segar dan menyegarkan pada sabun cuci piring. Dengan manfaat antibakteri dan daya tarik aroma yang dimiliki, bibit parfum ini dapat menjadi nilai tambah bagi produk sabun cuci piring Anda.'
@@ -96,14 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 10,
-            title: 'Klenzo Sabun Cair Serbaguna Eco Enzyme 1 Liter',
+            title: 'Klenzo Sabun Cair Eco Enzyme 1 Liter',
             price: 24500,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/25/9a1c90b6-13cc-436e-99b4-04d3736523f3.jpg',
             description: 'Klenzo Sabun Eco Enzyme adalah sabun cair serbaguna yang terbuat dari bahan-bahan alami dan eco enzyme. Eco enzyme sendiri merupakan hasil fermentasi dari buah-buahan dan gula yang memiliki banyak manfaat, seperti sebagai desinfektan alami dan pupuk organik.'
         },
         {
             id: 11,
-            title: 'Klenzo Eco Enzyme Biang Pembersih Dan Penyubur Tanaman',
+            title: 'Klenzo Eco Enzyme Biang Pembersih Penyubur Tanaman',
             price: 275000,
             image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2024/12/25/a079c51a-6324-43bc-af62-26478e370b34.jpg',
             description: 'Klenzo Eco Enzyme adalah produk cairan biang yang terbuat dari bahan-bahan alami dan ramah lingkungan. Produk ini memiliki banyak kegunaan di rumah, mulai dari membersihkan hingga menjadi pupuk organik.'
