@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 6,
-            title: 'Product 6',
-            price: 650000,
-            image: 'https://via.placeholder.com/300',
-            description: 'Vivamus magna justo, lacinia eget consectetur sed.'
+            title: 'Deterjen Bubuk Sabun Laundry Sokaraja 500 gr Pilihan Tepat untuk Kebersihan Pakaian Anda',
+            price: 6000,
+            image: 'https://images.tokopedia.net/img/cache/900/VqbcmM/2025/1/10/aa110d74-8110-47db-888b-b3a56a43362f.jpg',
+            description: 'Untuk mendapatkan hasil cucian yang bersih dan wangi, Anda membutuhkan sabun laundry yang berkualitas. Salah satu pilihan yang layak dipertimbangkan adalah sabun laundry Sokaraja deterjen bubuk 500 gr dengan busa sedang dan wangi.'
         },
         {
             id: 7,
