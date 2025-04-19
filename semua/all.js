@@ -576,7 +576,7 @@ function checkout() {
     });
 
     // Initialize
-    switchPage('home');
+    switchPage('produk');
     renderProducts();
     updateCart();
 });
