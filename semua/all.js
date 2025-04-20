@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 9,
             title: 'Sokaraja Deterjen Laundry 1 liter',
-            price: 145000,
+            price: 14500,
             image: 'https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/12/25/611842f8-6ad5-406b-8fcb-7de6ed8ac4a6.jpg.webp?ect=4g',
             description: 'Salah satu produk deterjen yang dapat menjadi solusi adalah Sokaraja Deterjen Laundry. Sokaraja Deterjen Laundry adalah sabun cair serbaguna yang dikhususkan untuk memenuhi kebutuhan mencuci pakaian.'
         },
