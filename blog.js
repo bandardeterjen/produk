@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Check if we're on a post page
-    if (window.location.pathname.includes('post.html')) {
+    // Check if we're on a post page (either direct or pretty URL)
+    if (window.location.pathname.includes('404.html') || 
+        /\/\d{4}\/\d{2}\/\d{2}\/.+\.html$/.test(window.location.pathname)) {
         loadSinglePost();
     } else {
         loadBlogPosts();
@@ -20,9 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Create URL slug from title
 function createSlug(title) {
     return title.toLowerCase()
-        .replace(/[^\w\s]/g, '') // Remove special chars
-        .replace(/\s+/g, '-')    // Replace spaces with -
-        .substring(0, 50);       // Limit length
+        .replace(/[^\w\s-]/g, '')  // Remove special chars except hyphens
+        .replace(/\s+/g, '-')       // Replace spaces with -
+        .replace(/-+/g, '-')        // Replace multiple - with single -
+        .substring(0, 50)           // Limit length
+        .replace(/-$/, '');         // Remove trailing -
 }
 
 // Load all blog posts with pagination
@@ -31,8 +34,11 @@ async function loadBlogPosts() {
         const response = await fetch('blog_data.json');
         const allPosts = await response.json();
         
+        // Sort posts by date (newest first)
+        allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
         // Pagination variables
-        const postsPerPage = 6;
+        const postsPerPage = 3;
         const currentPage = getPageNumber();
         const totalPages = Math.ceil(allPosts.length / postsPerPage);
         const paginatedPosts = allPosts.slice(
@@ -112,28 +118,55 @@ function getPageNumber() {
 
 // Load single post
 async function loadSinglePost() {
-    // Extract slug from URL (format: /2025/04/20/slug.html)
-    const pathParts = window.location.pathname.split('/');
-    const slug = pathParts[pathParts.length - 1].replace('.html', '');
+    let slug, year, month, day;
+    
+    // Check if this is a pretty URL (format: /2025/04/20/slug.html)
+    const pathMatch = window.location.pathname.match(/\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\.html$/);
+    
+    if (pathMatch) {
+        // Pretty URL format
+        year = pathMatch[1];
+        month = pathMatch[2];
+        day = pathMatch[3];
+        slug = pathMatch[4];
+    } else {
+        // Handle direct access to 404.html with hash URL
+        // Extract from URL like 404.html#2025/04/20/slug
+        const hash = window.location.hash.substring(1);
+        const hashParts = hash.split('/');
+        if (hashParts.length === 4) {
+            year = hashParts[0];
+            month = hashParts[1];
+            day = hashParts[2];
+            slug = hashParts[3];
+        }
+    }
     
     try {
         const response = await fetch('blog_data.json');
         const posts = await response.json();
         
         // Find post by matching slug
-        const post = posts.find(p => createSlug(p.title) === slug);
+        const post = posts.find(p => {
+            const postSlug = createSlug(p.title);
+            const postDate = new Date(p.date);
+            const postYear = postDate.getFullYear();
+            const postMonth = String(postDate.getMonth() + 1).padStart(2, '0');
+            const postDay = String(postDate.getDate()).padStart(2, '0');
+            
+            return postSlug === slug && 
+                   postYear == year && 
+                   postMonth == month && 
+                   postDay == day;
+        });
         
         if (post) {
             const postDate = new Date(post.date);
-            const year = postDate.getFullYear();
-            const month = String(postDate.getMonth() + 1).padStart(2, '0');
-            const day = String(postDate.getDate()).padStart(2, '0');
+            const prettyUrl = `/${year}/${month}/${day}/${slug}.html`;
             
-            // Verify URL matches expected format
-            const expectedPath = `/${year}/${month}/${day}/${slug}.html`;
-            if (!window.location.pathname.endsWith(expectedPath)) {
-                // Redirect to correct URL if needed
-                window.history.replaceState(null, null, expectedPath);
+            // Update browser URL if needed (for direct 404.html access)
+            if (!pathMatch && window.location.pathname.includes('404.html')) {
+                window.history.replaceState(null, null, prettyUrl);
             }
             
             // Display post
@@ -159,20 +192,6 @@ async function loadSinglePost() {
         }
     } catch (error) {
         console.error('Error loading post:', error);
+        window.location.href = 'index.html';
     }
 }
-
-// Handle GitHub Pages 404 redirect for pretty URLs
-function handlePageRedirect() {
-    // Only needed if using pretty URLs on GitHub Pages
-    const segmentCount = window.location.pathname.split('/').filter(Boolean).length;
-    
-    // If path looks like a post URL but we got redirected to 404.html
-    if (segmentCount === 4 && window.location.pathname.includes('.html')) {
-        // Try to load the post directly
-        loadSinglePost();
-    }
-}
-
-// Initialize
-handlePageRedirect();
