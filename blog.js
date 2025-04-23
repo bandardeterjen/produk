@@ -38,7 +38,7 @@ async function loadBlogPosts() {
         allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         // Pagination variables
-        const postsPerPage = 3;
+        const postsPerPage = 6;
         const currentPage = getPageNumber();
         const totalPages = Math.ceil(allPosts.length / postsPerPage);
         const paginatedPosts = allPosts.slice(
