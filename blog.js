@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Initialize search functionality
+    initSearch();
+    
     // Check if we're on a post page
     if (isPostPage()) {
         loadSinglePost();
@@ -16,6 +19,58 @@ document.addEventListener('DOMContentLoaded', function() {
         loadBlogPosts();
     }
 });
+
+function initSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    
+    if (!searchInput || !searchResults) return;
+    
+    searchInput.addEventListener('input', async function() {
+        const query = this.value.trim().toLowerCase();
+        
+        if (query.length < 2) {
+            searchResults.style.display = 'none';
+            return;
+        }
+        
+        try {
+            const response = await fetch('/jsonblog/blog_data.json');
+            const posts = await response.json();
+            
+            const results = posts.filter(post => 
+                post.title.toLowerCase().includes(query) || 
+                post.excerpt.toLowerCase().includes(query) ||
+                post.description.toLowerCase().includes(query)
+            ).slice(0, 5);
+            
+            if (results.length > 0) {
+                searchResults.innerHTML = results.map(post => {
+                    const postDate = new Date(post.date);
+                    const slug = createSlug(post.title);
+                    const url = `/jsonblog/${postDate.getFullYear()}/${String(postDate.getMonth() + 1).padStart(2, '0')}/${String(postDate.getDate()).padStart(2, '0')}/${slug}.html`;
+                    
+                    return `<a href="${url}">${post.title} <small>(${postDate.toLocaleDateString()})</small></a>`;
+                }).join('');
+                searchResults.style.display = 'block';
+            } else {
+                searchResults.innerHTML = '<div class="no-results">No articles found</div>';
+                searchResults.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Search error:', error);
+            searchResults.innerHTML = '<div class="no-results">Error loading search results</div>';
+            searchResults.style.display = 'block';
+        }
+    });
+    
+    // Hide results when clicking elsewhere
+    document.addEventListener('click', function(e) {
+        if (e.target !== searchInput) {
+            searchResults.style.display = 'none';
+        }
+    });
+}
 
 function isPostPage() {
     return window.location.pathname.includes('404.html') || 
@@ -86,12 +141,10 @@ async function loadBlogPosts() {
         if (pagination && totalPages > 1) {
             let paginationHTML = '';
             
-            // Previous button
             if (currentPage > 1) {
                 paginationHTML += `<a href="/jsonblog/index.html?page=${currentPage - 1}">← Previous</a>`;
             }
             
-            // Page numbers (max 3 shown)
             const startPage = Math.max(1, currentPage - 1);
             const endPage = Math.min(totalPages, currentPage + 1);
             
@@ -99,7 +152,6 @@ async function loadBlogPosts() {
                 paginationHTML += `<a href="/jsonblog/index.html?page=${i}" ${i === currentPage ? 'class="active"' : ''}>${i}</a>`;
             }
             
-            // Next button
             if (currentPage < totalPages) {
                 paginationHTML += `<a href="/jsonblog/index.html?page=${currentPage + 1}">Next →</a>`;
             }
@@ -116,24 +168,15 @@ async function loadBlogPosts() {
     }
 }
 
-function getPageNumber() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const page = parseInt(urlParams.get('page')) || 1;
-    return Math.max(1, page);
-}
-
 async function loadSinglePost() {
     try {
         let year, month, day, slug;
         
-        // Check for pretty URL format: /2025/04/20/slug.html
         const pathMatch = window.location.pathname.match(/\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\.html$/);
         
         if (pathMatch) {
             [year, month, day, slug] = pathMatch.slice(1);
-        } 
-        // Check for 404.html with hash URL
-        else if (window.location.hash) {
+        } else if (window.location.hash) {
             [year, month, day, slug] = window.location.hash.substring(1).split('/');
         } else {
             throw new Error('Invalid post URL');
@@ -152,7 +195,18 @@ async function loadSinglePost() {
         });
         
         if (post) {
-            document.title = `${post.title} | My Blog`;
+            // Update SEO meta tags
+            document.getElementById('post-title').textContent = `${post.title} | My Laundry Blog`;
+            document.getElementById('meta-description').content = post.excerpt;
+            document.getElementById('meta-keywords').content = `laundry, ${post.title.toLowerCase().split(' ').join(', ')}, ${post.author}`;
+            
+            // Update Open Graph tags
+            document.getElementById('og-url').content = window.location.href;
+            document.getElementById('og-title').content = post.title;
+            document.getElementById('og-description').content = post.excerpt;
+            document.getElementById('og-image').content = post.image;
+            
+            // Display post content
             document.getElementById('post-content').innerHTML = `
                 <h1>${post.title}</h1>
                 <div class="post-meta">
@@ -179,4 +233,10 @@ async function loadSinglePost() {
             </div>
         `;
     }
+}
+
+function getPageNumber() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = parseInt(urlParams.get('page')) || 1;
+    return Math.max(1, page);
 }
