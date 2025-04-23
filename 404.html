@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post | My Blog</title>
+    <!-- Dynamic SEO Meta Tags -->
+    <title id="post-title">Loading Post | My Laundry Blog</title>
+    <meta id="meta-description" name="description" content="">
+    <meta id="meta-keywords" name="keywords" content="laundry, blog">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-description" content="">
+    <meta property="og:image" id="og-image" content="">
+    
     <link rel="stylesheet" href="/jsonblog/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -29,16 +40,14 @@
         </div>
     </div>
 </header>
-
+    
     <main class="container">
         <article id="post-content" class="single-post">
             <div class="loading">Loading post...</div>
         </article>
     </main>
 
-   
-
-    <footer>
+     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -71,7 +80,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="/jsonblog/blog.js"></script>
     <script>
         if (window.location.pathname.includes('404.html') && window.location.hash) {
