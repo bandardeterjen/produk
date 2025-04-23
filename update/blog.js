@@ -46,55 +46,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Search functionality
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-    
-    if (searchInput && searchResults) {
-        searchInput.addEventListener('input', async function() {
-            const query = this.value.trim().toLowerCase();
+   // Search functionality
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+
+if (searchInput && searchResults) {
+    searchInput.addEventListener('input', async function() {
+        const query = this.value.trim().toLowerCase();
+        
+        if (query.length < 2) {
+            searchResults.style.display = 'none';
+            return;
+        }
+        
+        try {
+            const response = await fetch('/jsonblog/blog_data.json');
+            const posts = await response.json();
             
-            if (query.length < 2) {
-                searchResults.style.display = 'none';
-                return;
-            }
+            const results = posts.filter(post => 
+                post.title.toLowerCase().includes(query) || 
+                post.excerpt.toLowerCase().includes(query) ||
+                post.description.toLowerCase().includes(query)
+            ).slice(0, 5);
             
-            try {
-                const response = await fetch('/jsonblog/blog_data.json');
-                const posts = await response.json();
-                
-                const results = posts.filter(post => 
-                    post.title.toLowerCase().includes(query) || 
-                    post.excerpt.toLowerCase().includes(query) ||
-                    post.description.toLowerCase().includes(query)
-                ).slice(0, 5);
-                
-                if (results.length > 0) {
-                    searchResults.innerHTML = results.map(post => {
-                        const postDate = new Date(post.date);
-                        const slug = createSlug(post.title);
-                        const url = `/jsonblog/${postDate.getFullYear()}/${String(postDate.getMonth() + 1).padStart(2, '0')}/${String(postDate.getDate()).padStart(2, '0')}/${slug}.html`;
-                        
-                        return `<a href="${url}">${post.title} <small>(${postDate.toLocaleDateString()})</small></a>`;
-                    }).join('');
-                    searchResults.style.display = 'block';
-                } else {
-                    searchResults.innerHTML = '<div class="no-results">No articles found</div>';
-                    searchResults.style.display = 'block';
-                }
-            } catch (error) {
-                console.error('Search error:', error);
-                searchResults.innerHTML = '<div class="no-results">Error searching</div>';
+            if (results.length > 0) {
+                searchResults.innerHTML = results.map(post => {
+                    const postDate = new Date(post.date);
+                    const slug = createSlug(post.title);
+                    const url = `/jsonblog/${postDate.getFullYear()}/${String(postDate.getMonth() + 1).padStart(2, '0')}/${String(postDate.getDate()).padStart(2, '0')}/${slug}.html`;
+                    
+                    return `<a href="${url}">${post.title} <small>(${postDate.toLocaleDateString()})</small></a>`;
+                }).join('');
+                searchResults.style.display = 'block';
+            } else {
+                searchResults.innerHTML = '<div class="no-results">No articles found</div>';
                 searchResults.style.display = 'block';
             }
-        });
-        
-        // Hide results when clicking elsewhere
-        document.addEventListener('click', function(e) {
-            if (e.target !== searchInput) {
-                searchResults.style.display = 'none';
-            }
-        });
-    }
+        } catch (error) {
+            console.error('Search error:', error);
+            searchResults.innerHTML = '<div class="no-results">Error searching</div>';
+            searchResults.style.display = 'block';
+        }
+    });
+    
+    // Hide results when clicking elsewhere
+    document.addEventListener('click', function(e) {
+        if (e.target !== searchInput) {
+            searchResults.style.display = 'none';
+        }
+    });
+}
 
     // Check if we're on a post page
     if (isPostPage()) {
