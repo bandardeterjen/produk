@@ -1,0 +1,4 @@
+title: My Blog
+theme: jekyll-theme-minimal
+permalink: pretty
+include: [".htaccess"]
