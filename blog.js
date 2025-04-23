@@ -170,7 +170,7 @@ async function loadBlogPosts() {
 
 async function loadSinglePost() {
     try {
-        let year, month, day, slug;
+         let year, month, day, slug;
         
         const pathMatch = window.location.pathname.match(/\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)\.html$/);
         
@@ -193,7 +193,7 @@ async function loadSinglePost() {
                    String(postDate.getMonth() + 1).padStart(2, '0') == month &&
                    String(postDate.getDate()).padStart(2, '0') == day;
         });
-        
+
         if (post) {
             // Update SEO meta tags
             document.getElementById('post-title').textContent = `${post.title} | My Laundry Blog`;
@@ -206,7 +206,7 @@ async function loadSinglePost() {
             document.getElementById('og-description').content = post.excerpt;
             document.getElementById('og-image').content = post.image;
             
-            // Display post content
+            // Display post content - UPDATED TO HANDLE HTML TAGS
             document.getElementById('post-content').innerHTML = `
                 <h1>${post.title}</h1>
                 <div class="post-meta">
@@ -234,6 +234,7 @@ async function loadSinglePost() {
         `;
     }
 }
+
 
 function getPageNumber() {
     const urlParams = new URLSearchParams(window.location.search);
