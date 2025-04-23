@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Paragraph to JSON Converter</title>
+    <title>Article to JSON Converter</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -108,7 +108,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Article Paragraph to JSON Converter</h1>
+        <h1>Article to JSON Converter</h1>
         
         <div class="input-section">
             <label for="article-input">Input Article (plain text with paragraphs):</label>
@@ -150,18 +150,15 @@
                 // Split into paragraphs (separated by two or more newlines)
                 const paragraphs = article.split(/\n\s*\n/);
                 
-                // Join paragraphs with </p><br/><p>
-                let converted = paragraphs.map(p => p.trim()).join('</p><br/><p>');
+                // Join paragraphs with </p><p>
+                let description = paragraphs.map(p => p.trim()).join('</p><p>');
                 
                 // Wrap the entire content in <p> tags
-                converted = `<p>${converted}</p>`;
+                description = `<p>${description}</p>`;
                 
-                // Create JSON object
+                // Create simplified JSON object
                 const jsonResult = {
-                    original: articleInput.value,
-                    converted: converted,
-                    paragraphCount: paragraphs.length,
-                    timestamp: new Date().toISOString()
+                    description: description
                 };
                 
                 // Display formatted JSON
