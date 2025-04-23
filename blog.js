@@ -196,7 +196,7 @@ async function loadSinglePost() {
 
         if (post) {
             // Update SEO meta tags
-            document.getElementById('post-title').textContent = `${post.title} | My Laundry Blog`;
+            document.getElementById('post-title').textContent = `${post.title} | Bandar Deterjen`;
             document.getElementById('meta-description').content = post.excerpt;
             document.getElementById('meta-keywords').content = `laundry, ${post.title.toLowerCase().split(' ').join(', ')}, ${post.author}`;
             
