@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article to JSON Converter</title>
+    <title>>Article to JSON Converter | Bandar Deterjen</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -105,9 +105,32 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/jsonblog/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
+   <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/jsonblog">Bandar Deterjen</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="/jsonblog">Home</a></li>
+                        <li><a href="/jsonblog/about.html">About</a></li>
+                        <li><a href="/jsonblog/contact.html">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+     <div class="container">
         <h1>Article to JSON Converter</h1>
         
         <div class="input-section">
@@ -127,7 +150,42 @@
         </div>
     </div>
 
-    <script>
+   <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Welcome to our blog where we share interesting articles about laundry products.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/bandardeterjen"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.x.com/bandardeterjen"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/bandardeterjen"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/bandardeterjen"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                         <li><a href="/jsonblog/">Home</a></li>
+                        <li><a href="/jsonblog/about.html">About</a></li>
+                        <li><a href="/jsonblog/contact.html">Contact</a></li>
+                        <li><a href="/jsonblog/tool">Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +62 857-7300-9666</li>
+                        <li><i class="fas fa-envelope"></i> bandardeterjen@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bandar Deterjen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const articleInput = document.getElementById('article-input');
             const jsonOutput = document.getElementById('json-output');
@@ -188,5 +246,6 @@
             }
         });
     </script>
+    <script src="/jsonblog/blog.js"></script>
 </body>
-</html>
+</html>\
