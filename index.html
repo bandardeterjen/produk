@@ -9,38 +9,41 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">My Blog</div>
-                <nav class="main-nav">
-                    <ul class="nav-links">
-                        <li><a href="/jsonblog/index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <div class="hamburger">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </nav>
-            </div>
+   <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">My Blog</div>
+            <nav class="main-nav">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search articles...">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/jsonblog/index.html">Home</a></li>
+                    <li><a href="/jsonblog/about.html">About</a></li>
+                    <li><a href="/jsonblog/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main class="container">
         <div id="blog-grid" class="blog-grid"></div>
         <div id="pagination" class="pagination"></div>
     </main>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About Us</h3>
-                    <p>Welcome to our blog where we share interesting articles.</p>
+                    <p>Welcome to our blog where we share interesting articles about laundry products.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -52,14 +55,14 @@
                     <ul>
                         <li><a href="/jsonblog/index.html">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><a href="#>Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> contact@myblog.com</li>
-                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-phone"></i> +62 857-7300-9666</li>
+                        <li><i class="fas fa-envelope"></i> bandardeterjen@gmail.com</li>
                     </ul>
                 </div>
             </div>
