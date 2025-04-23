@@ -32,7 +32,7 @@ async function loadBlogPosts() {
         const allPosts = await response.json();
         
         // Pagination variables
-        const postsPerPage = 3;
+        const postsPerPage = 6;
         const currentPage = getPageNumber();
         const totalPages = Math.ceil(allPosts.length / postsPerPage);
         const paginatedPosts = allPosts.slice(
