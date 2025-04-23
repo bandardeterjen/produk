@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Getting Started with JavaScript",
+        "excerpt": "Learn the basics of JavaScript programming language",
+        "description": "<p>This is a comprehensive guide to JavaScript basics covering variables, functions, loops and more. We'll explore how to write your first JavaScript program and understand fundamental concepts.</p><p>JavaScript is the programming language of the web. It allows you to create dynamically updating content, control multimedia, animate images, and much more.</p>",
+        "author": "John Doe",
+        "date": "2025-04-20",
+        "image": "https://source.unsplash.com/random/600x400/?javascript"
+    },
+    {
+        "title": "Responsive Design Principles",
+        "excerpt": "Key principles for creating responsive websites",
+        "description": "<p>Learn how to create websites that look great on all devices with these responsive design principles. We'll cover media queries, flexible grids, and responsive images.</p><p>Responsive web design is about creating web pages that look good on all devices. A responsive web design will automatically adjust for different screen sizes and viewports.</p>",
+        "author": "Jane Smith",
+        "date": "2025-04-18",
+        "image": "https://source.unsplash.com/random/600x400/?design"
+    },
+    {
+        "title": "The Future of Web Development",
+        "excerpt": "Exploring emerging trends in web development",
+        "description": "<p>What does the future hold for web development? We explore the latest trends and technologies including WebAssembly, Progressive Web Apps, and the evolving JavaScript ecosystem.</p><p>The web development landscape is constantly changing. New frameworks, tools, and best practices emerge regularly, making it an exciting field to be part of.</p>",
+        "author": "Mike Johnson",
+        "date": "2025-04-15",
+        "image": "https://source.unsplash.com/random/600x400/?future"
+    },
+    {
+        "title": "CSS Grid Layout Tutorial",
+        "excerpt": "Master CSS Grid with this comprehensive tutorial",
+        "description": "<p>CSS Grid has revolutionized web layout. Learn how to use it effectively in this detailed tutorial that covers grid containers, grid items, and advanced layout techniques.</p><p>CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.</p>",
+        "author": "Sarah Williams",
+        "date": "2025-04-10",
+        "image": "https://source.unsplash.com/random/600x400/?css"
+    },
+    {
+        "title": "Introduction to React",
+        "excerpt": "Learn the fundamentals of React library",
+        "description": "<p>React is a JavaScript library for building user interfaces. In this tutorial, we'll cover components, props, state, and the component lifecycle.</p><p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>",
+        "author": "David Brown",
+        "date": "2025-04-05",
+        "image": "https://source.unsplash.com/random/600x400/?react"
+    },
+    {
+        "title": "Web Performance Optimization",
+        "excerpt": "Techniques to make your website faster",
+        "description": "<p>Learn essential techniques to improve your website's loading speed and overall performance. We'll cover image optimization, code minification, lazy loading, and more.</p><p>Web performance refers to the speed in which web pages are downloaded and displayed on the user's web browser. Faster website loading improves user experience and increases conversions.</p>",
+        "author": "Emily Davis",
+        "date": "2025-04-01",
+        "image": "https://source.unsplash.com/random/600x400/?speed"
+    },
+    {
+        "title": "Accessibility Best Practices",
+        "excerpt": "Making the web accessible to everyone",
+        "description": "<p>Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. Learn the key principles and techniques.</p><p>Accessibility supports social inclusion for people with disabilities as well as others, such as older people, people in rural areas, and people in developing countries.</p>",
+        "author": "Robert Wilson",
+        "date": "2025-03-28",
+        "image": "https://source.unsplash.com/random/600x400/?accessibility"
+    },
+    {
+        "title": "Building RESTful APIs",
+        "excerpt": "Design and implement REST APIs",
+        "description": "<p>Learn how to design and implement RESTful APIs that follow best practices. We'll cover resources, HTTP methods, status codes, and versioning.</p><p>A RESTful API is an architectural style for an application program interface (API) that uses HTTP requests to access and use data. That data can be used to GET, PUT, POST and DELETE data types.</p>",
+        "author": "Lisa Taylor",
+        "date": "2025-03-25",
+        "image": "https://source.unsplash.com/random/600x400/?api"
+    },
+    {
+        "title": "Progressive Web Apps",
+        "excerpt": "Building reliable, fast, and engaging web apps",
+        "description": "<p>Progressive Web Apps are web applications that have been designed to be capable, reliable, and installable. Learn how to build PWAs that work offline and feel like native apps.</p><p>PWAs provide an app-like experience through the browser. They're built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability.</p>",
+        "author": "Michael Clark",
+        "date": "2025-03-20",
+        "image": "https://source.unsplash.com/random/600x400/?pwa"
+    }
+]
