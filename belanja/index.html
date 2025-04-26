@@ -737,8 +737,9 @@
         let allProducts = [];
         let cart = [];
         let currentPage = 1;
-        const productsPerPage = 12;
+        const productsPerPage = 6; // Changed from 12 to 6
         const whatsappNumber = "6285773009666";
+        const maxVisiblePages = 2; // Maximum number of visible page buttons
         
         // DOM Elements
         const cartToggle = document.getElementById('cartToggle');
@@ -927,7 +928,7 @@
             });
         }
         
-        // Setup pagination buttons
+        // Setup pagination buttons with max 3 visible page buttons
         function setupPagination(products) {
             const pageCount = Math.ceil(products.length / productsPerPage);
             pagination.innerHTML = '';
@@ -943,8 +944,46 @@
             });
             pagination.appendChild(prevBtn);
             
-            // Page numbers
-            for (let i = 1; i <= pageCount; i++) {
+            // Calculate range of pages to show (max 3 pages)
+            let startPage, endPage;
+            if (pageCount <= maxVisiblePages) {
+                // Show all pages if total pages is less than maxVisiblePages
+                startPage = 1;
+                endPage = pageCount;
+            } else {
+                // Calculate start and end pages to show
+                const halfVisible = Math.floor(maxVisiblePages / 2);
+                
+                if (currentPage <= halfVisible + 1) {
+                    startPage = 1;
+                    endPage = maxVisiblePages;
+                } else if (currentPage >= pageCount - halfVisible) {
+                    startPage = pageCount - maxVisiblePages + 1;
+                    endPage = pageCount;
+                } else {
+                    startPage = currentPage - halfVisible;
+                    endPage = currentPage + halfVisible;
+                }
+            }
+            
+            // First page button with ellipsis if needed
+            if (startPage > 1) {
+                const firstPageBtn = document.createElement('button');
+                firstPageBtn.textContent = 1;
+                firstPageBtn.addEventListener('click', () => {
+                    changePage(1);
+                });
+                pagination.appendChild(firstPageBtn);
+                
+                if (startPage > 2) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    pagination.appendChild(ellipsis);
+                }
+            }
+            
+            // Page number buttons
+            for (let i = startPage; i <= endPage; i++) {
                 const pageBtn = document.createElement('button');
                 pageBtn.textContent = i;
                 if (i === currentPage) {
@@ -954,6 +993,22 @@
                     changePage(i);
                 });
                 pagination.appendChild(pageBtn);
+            }
+            
+            // Last page button with ellipsis if needed
+            if (endPage < pageCount) {
+                if (endPage < pageCount - 1) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    pagination.appendChild(ellipsis);
+                }
+                
+                const lastPageBtn = document.createElement('button');
+                lastPageBtn.textContent = pageCount;
+                lastPageBtn.addEventListener('click', () => {
+                    changePage(pageCount);
+                });
+                pagination.appendChild(lastPageBtn);
             }
             
             // Next button
