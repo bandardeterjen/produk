@@ -853,7 +853,7 @@
         
         // Load products from CSV
         function loadProducts() {
-            fetch('belanja/daftarproduk.csv')
+            fetch('daftarproduk.csv')
                 .then(response => response.text())
                 .then(csvText => {
                     allProducts = parseCSV(csvText);
