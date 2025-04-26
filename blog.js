@@ -35,7 +35,7 @@ function initSearch() {
         }
         
         try {
-            const response = await fetch('/jsonblog/blog_data.json');
+            const response = await fetch('/produk/blog_data.json');
             const posts = await response.json();
             
             const results = posts.filter(post => 
@@ -48,7 +48,7 @@ function initSearch() {
                 searchResults.innerHTML = results.map(post => {
                     const postDate = new Date(post.date);
                     const slug = createSlug(post.title);
-                    const url = `/jsonblog/${postDate.getFullYear()}/${String(postDate.getMonth() + 1).padStart(2, '0')}/${String(postDate.getDate()).padStart(2, '0')}/${slug}.html`;
+                    const url = `/produk/${postDate.getFullYear()}/${String(postDate.getMonth() + 1).padStart(2, '0')}/${String(postDate.getDate()).padStart(2, '0')}/${slug}.html`;
                     
                     return `<a href="${url}">${post.title} <small>(${postDate.toLocaleDateString()})</small></a>`;
                 }).join('');
@@ -88,7 +88,7 @@ function createSlug(title) {
 
 async function loadBlogPosts() {
     try {
-        const response = await fetch('/jsonblog/blog_data.json');
+        const response = await fetch('/produk/blog_data.json');
         const allPosts = await response.json();
         
         // Sort by date (newest first)
@@ -112,7 +112,7 @@ async function loadBlogPosts() {
                 const month = String(postDate.getMonth() + 1).padStart(2, '0');
                 const day = String(postDate.getDate()).padStart(2, '0');
                 const slug = createSlug(post.title);
-                const postUrl = `/jsonblog/${year}/${month}/${day}/${slug}.html`;
+                const postUrl = `/produk/${year}/${month}/${day}/${slug}.html`;
                 
                 return `
                     <article class="blog-card">
@@ -142,18 +142,18 @@ async function loadBlogPosts() {
             let paginationHTML = '';
             
             if (currentPage > 1) {
-                paginationHTML += `<a href="/jsonblog/index.html?page=${currentPage - 1}">← Previous</a>`;
+                paginationHTML += `<a href="/produk/index.html?page=${currentPage - 1}">← Previous</a>`;
             }
             
             const startPage = Math.max(1, currentPage - 1);
             const endPage = Math.min(totalPages, currentPage + 1);
             
             for (let i = startPage; i <= endPage; i++) {
-                paginationHTML += `<a href="/jsonblog/index.html?page=${i}" ${i === currentPage ? 'class="active"' : ''}>${i}</a>`;
+                paginationHTML += `<a href="/produk/index.html?page=${i}" ${i === currentPage ? 'class="active"' : ''}>${i}</a>`;
             }
             
             if (currentPage < totalPages) {
-                paginationHTML += `<a href="/jsonblog/index.html?page=${currentPage + 1}">Next →</a>`;
+                paginationHTML += `<a href="/produk/index.html?page=${currentPage + 1}">Next →</a>`;
             }
             
             pagination.innerHTML = paginationHTML;
@@ -182,7 +182,7 @@ async function loadSinglePost() {
             throw new Error('Invalid post URL');
         }
         
-        const response = await fetch('/jsonblog/blog_data.json');
+        const response = await fetch('/produk/blog_data.json');
         const posts = await response.json();
         
         const post = posts.find(p => {
@@ -220,16 +220,16 @@ async function loadSinglePost() {
                 <div class="post-body">
                     ${post.description}
                 </div>
-                <a href="/jsonblog/index.html" class="back-link">← Back to Blog</a>
+                <a href="/produk/index.html" class="back-link">← Back to Blog</a>
             `;
         } else {
-            window.location.href = '/jsonblog/index.html';
+            window.location.href = '/produk/index.html';
         }
     } catch (error) {
         console.error('Error loading post:', error);
         document.getElementById('post-content').innerHTML = `
             <div class="error-message">
-                <p>Post not found. <a href="/jsonblog/index.html">Return to blog</a></p>
+                <p>Post not found. <a href="/produk/index.html">Return to blog</a></p>
             </div>
         `;
     }
